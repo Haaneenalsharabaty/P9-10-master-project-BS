@@ -41,12 +41,14 @@
                         <td>{{ $user->mobile_number }}</td>
                         <td>{{ $user->role }}</td>
 
+                        @if($user->role !='admin')
 
                         <td><a  href="{{url('editUser/'.$user->id)}}"><button type="button" class="btn btn-success"> Edit</button></a>
 
                                 <a  href="{{url('deleteUser/'.$user->id)}}"><button type="button" class="btn btn-danger"  >Delete</button></a>
                             </td>
-                    </tr>
+
+                    </tr>   @endif
                     @endforeach
                 </tbody>
             </table>

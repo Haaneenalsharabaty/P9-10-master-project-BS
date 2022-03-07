@@ -4,6 +4,7 @@ use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\IndexController;
 use App\Http\Controllers\admin\ServiceController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -18,10 +19,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('admin.index');
-// });
-Route::get('/', [IndexController::class, 'index']);
+
+
+Route::get('/aboutUs', function () {
+    return view('layouts.aboutUs');
+});
+Route::get('/', function () {
+    return view('layouts.index');
+});
+Route::get('/about-us', function () {
+    return view('about-us');
+});
+Route::get('/', [App\Http\Controllers\IndexController::class, 'index']);
+Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index']);
+Route::post('/contact-us-store', [App\Http\Controllers\ContactController::class, 'store'])->name('contact-us');
+Auth::routes();
+// Route::middleware(['auth','IsAdmin'])->group(function () {
+
+Route::get('admin/index', [IndexController::class, 'index']);
 // Route::get('/', [IndexController::class, 'admin']);
 Route::get('users', [UserController::class, 'index']);
 Route::get('editUser/{id}', [UserController::class, 'edit']);
@@ -37,10 +52,12 @@ Route::get('servicess', [ServiceController::class, 'index']);
 
 Route::get('/admin/catergories/add', [CategoryController::class, 'create']);
 Route::post('/admin/catergories/store', [CategoryController::class, 'store']);
-Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::get('editService/{id}',[ServiceController::class,'edit']);
 Route::put('editService1/{id}',[ServiceController::class,'update']);
 Route::get('/admin/services/add', [ServiceController::class, 'create']);
 Route::post('/admin/services/store', [ServiceController::class, 'store']);
 Route::get('deleteService/{id}', [ServiceController::class, 'destroy']);
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// });

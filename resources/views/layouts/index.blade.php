@@ -81,12 +81,12 @@
           <a href="#" id="card_btn" class="btn btn-primary">Show all</a>
         </div>
       </div>
-      <div class="card home" style="width: 18rem; border-radius: 10em;">
+      <div class="card home" style="width: 18rem; border-radius: 5em;">
         <img class="card-img-top" src={{ asset('img/service-1.jpg') }} alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">face and body section</h5>
           <p class="card-text">Ready to head out to the salon for a restyle? Let our wide ranging collection of trend-led hairstyles and colours inspire you.</p>
-          <a href="#" id="card_btn" class="btn btn-primary">Show all </a>
+         <a href="#" id="card_btn" class="btn btn-primary">Show all </a>
         </div>
       </div>
     </div>
@@ -99,7 +99,9 @@
         @php
         $i=1
     @endphp
-        <table class="table table-striped">
+    <div id="price_table">
+        <h2> Our prices</h2>
+        <table id="table"    class="table table-striped">
 
 
 
@@ -107,16 +109,15 @@
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">service </th>
-                <th scope="col">price</th>
+                <th scope="col">price(start from*)</th>
 
               </tr>
-
-            </thead>
+            </thead> @foreach ( $services as $service )
             <tbody>
-              <tr> @foreach ( $services as $service )
+              <tr>
                 <th scope="row">{{ $i++ }}</th>
                 <td>{{ $service->service_name}}</td>
-                <td>{{ $service->price}}</td>
+                <td>{{ $service->price}}JD</td>
 
               </tr>
               @endforeach
@@ -134,57 +135,57 @@
               </tr> --}}
             </tbody>
           </table>
+    </div>
           <!-- prices end -->
            <!-- Testimonial Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-6 pb-5 pb-lg-0">
-                    <img class="img-fluid w-100" src="img/testimonial.jpg" alt="">
-                </div>
-                <div class="col-lg-6">
-                    <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">Testimonial</h6>
-                    <h1 class="mb-4">What Our Clients Say!</h1>
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="position-relative">
-                            <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
-                            <div class="d-flex align-items-center mb-3">
-                                <img class="img-fluid rounded-circle" src="img/testimonial-1.jpg" style="width: 60px; height: 60px;" alt="">
-                                <div class="ml-3">
-                                    <h6 class="text-uppercase">Client Name</h6>
-                                    <span>Profession</span>
-                                </div>
-                            </div>
-                            <p class="m-0">Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum diam  sed clita dolore eos dolores magna erat dolore sed stet justo et dolor.</p>
-                        </div>
-                        <div class="position-relative">
-                            <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
-                            <div class="d-flex align-items-center mb-3">
-                                <img class="img-fluid rounded-circle" src="img/testimonial-2.jpg" style="width: 60px; height: 60px;" alt="">
-                                <div class="ml-3">
-                                    <h6 class="text-uppercase">Client Name</h6>
-                                    <span>Profession</span>
-                                </div>
-                            </div>
-                            <p class="m-0">Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum diam  sed clita dolore eos dolores magna erat dolore sed stet justo et dolor.</p>
-                        </div>
-                        <div class="position-relative">
-                            <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
-                            <div class="d-flex align-items-center mb-3">
-                                <img class="img-fluid rounded-circle" src="img/testimonial-3.jpg" style="width: 60px; height: 60px;" alt="">
-                                <div class="ml-3">
-                                    <h6 class="text-uppercase">Client Name</h6>
-                                    <span>Profession</span>
-                                </div>
-                            </div>
-                            <p class="m-0">Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum diam  sed clita dolore eos dolores magna erat dolore sed stet justo et dolor.</p>
-                        </div>
+
+           <section class="home-testimonial">
+            <div class="container-fluid">
+                <div class="row d-flex justify-content-center testimonial-pos">
+
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <h2>Testimonials</h2>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+                <section class="home-testimonial-bottom">
+                    <div class="container testimonial-inner">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-4 style-3">
+                                <div class="tour-item ">
+                                    <div class="tour-desc bg-white">
+                                        <div class="tour-text color-grey-3 text-center">“At this School, our mission is to balance a rigorous comprehensive college preparatory curriculum with healthy social and emotional development.”</div>
+                                        <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/6625914/pexels-photo-6625914.jpeg" alt=""></div>
+                                        <div class="link-name d-flex justify-content-center">Balbir Kaur</div>
+                                        <div class="link-position d-flex justify-content-center">Student</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 style-3">
+                                <div class="tour-item ">
+                                    <div class="tour-desc bg-white">
+                                        <div class="tour-text color-grey-3 text-center">“At this School, our mission is to balance a rigorous comprehensive college preparatory curriculum with healthy social and emotional development.”</div>
+                                        <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></div>
+                                        <div class="link-name d-flex justify-content-center">Balbir Kaur</div>
+                                        <div class="link-position d-flex justify-content-center">Student</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 style-3">
+                                <div class="tour-item ">
+                                    <div class="tour-desc bg-white">
+                                        <div class="tour-text color-grey-3 text-center">“At this School, our mission is to balance a rigorous comprehensive college preparatory curriculum with healthy social and emotional development.”</div>
+                                        <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/4946604/pexels-photo-4946604.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></div>
+                                        <div class="link-name d-flex justify-content-center">Balbir Kaur</div>
+                                        <div class="link-position d-flex justify-content-center">Student</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+        </section>
+
     <!-- Testimonial End -->
+
 @endsection
 
 

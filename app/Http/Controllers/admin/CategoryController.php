@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Models\Category;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
@@ -15,8 +16,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
+        $adminName=User::where('role','=','admin')->get();
         $categories=Category::all();
-        return view('admin.categories.index',compact('categories'));
+        return view('admin.categories.index',compact('categories','adminName'));
 
 
 

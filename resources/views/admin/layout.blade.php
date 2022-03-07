@@ -25,10 +25,10 @@
     <link href={{ asset('lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }} rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href={{ asset('css/bootstrap.min.css') }} rel="stylesheet">
+    <link href={{ asset('/admin/css/bootstrap.min.css') }} rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href={{asset ('css/style.css') }} rel="stylesheet">
+    <link href={{asset ('/admin/css/style.css') }} rel="stylesheet">
 </head>
 
 <body>
@@ -45,7 +45,7 @@
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
-                <a href={{ url('/') }} class="navbar-brand mx-4 mb-3">
+                <a href={{ url('/admin/index') }} class="navbar-brand mx-4 mb-3">
                     <h3 style=" color: #d259a1!important;" class="text-primary"><i class="fa fa-hashtag me-2"></i>BS  dashboard</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
@@ -60,7 +60,7 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href={{ url('/') }} class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="{{ url('/admin/index') }}" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
                         <a href={{ url('users') }} class="nav-link "><i style=" color: #d259a1!important;" class="fa fa-users me-2"></i>Users</a>
                         <div class="dropdown-menu bg-transparent border-0">
@@ -212,7 +212,7 @@
     <script src={{asset ('lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}></script>
 
     <!-- Template Javascript -->
-    <script src={{asset ('js/main.js') }}></script>
+    <script src={{asset ('admin/js/main.js') }}></script>
 </body>
 
 </html>

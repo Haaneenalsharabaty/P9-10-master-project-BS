@@ -19,7 +19,9 @@ class DatabaseSeeder extends Seeder
 
             UserSeeder::class,
         CategorySeeder::class,
-        ServiceSeeder::class,]);
+        ServiceSeeder::class,
+        ContactSeeder::class,
+    ]);
 
         // \App\Models\User::factory(10)->create();
     }

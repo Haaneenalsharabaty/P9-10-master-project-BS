@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Models\Category;
 use App\Models\Service;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Symfony\Component\HttpKernel\DependencyInjection\ServicesResetter;
@@ -17,9 +18,10 @@ class ServiceController  extends Controller
      */
     public function index()
     {
+        $adminName=User::where('role','=','admin')->get();
 
         $services=Service::all();
-        return view('admin.servicess.index',compact('services'));
+        return view('admin.servicess.index',compact('services','adminName'));
     }
 
     /**
