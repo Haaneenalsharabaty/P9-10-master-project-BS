@@ -31,6 +31,14 @@ class CategorySeeder extends Seeder
 
             ],
 
+            [
+                'category_name' => 'skin care service',
+
+
+            ],
+
+
+
         ]);
     }
 }

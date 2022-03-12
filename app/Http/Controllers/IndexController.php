@@ -39,13 +39,13 @@ class IndexController extends Controller
     }
     public function hair()
     {
-        // Service::find()->where('category_id'==2);
+
       $services= DB::table('services')->where('category_id', '1')->get();
 
         // dd($services);
 
 
-        return view('layouts.gallery.nails',compact('services'));
+        return view('layouts.gallery.hair',compact('services'));
     }
 
     /**
