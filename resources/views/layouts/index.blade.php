@@ -62,7 +62,7 @@
         <div class="card-body">
           <h5 class="card-title">Nails section</h5>
           <p class="card-text">offers many services for our client.including manicures, pedicures, nail polish , nail repair,nail design,extension, fake nails.</p>
-          <a href="#" id="card_btn" class="btn btn-primary">Show all </a>
+          <a href="{{ url('/gallery') }}" id="card_btn" class="btn btn-primary">Show all </a>
         </div>
       </div>
       <div class="card home" style="width: 18rem;border-radius: 5em;">
@@ -70,7 +70,7 @@
         <div class="card-body">
           <h5 class="card-title">Hair section</h5>
           <p class="card-text">Ready to head out to the salon for a restyle? Let our wide ranging collection of trend-led hairstyles and colours inspire you.</p>
-          <a href="#" id="card_btn" class="btn btn-primary">Show all </a>
+          <a href="{{ url('/hair-gallery') }}" id="card_btn" class="btn btn-primary">Show all </a>
         </div>
       </div>
       <div class="card home" style="width: 18rem;border-radius: 5em;">

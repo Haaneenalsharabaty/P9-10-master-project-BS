@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
 {
@@ -26,9 +27,25 @@ class IndexController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function nails()
     {
-        //
+        // Service::find()->where('category_id'==2);
+      $services= DB::table('services')->where('category_id', '2')->get();
+
+        // dd($services);
+
+
+        return view('layouts.gallery.nails',compact('services'));
+    }
+    public function hair()
+    {
+        // Service::find()->where('category_id'==2);
+      $services= DB::table('services')->where('category_id', '1')->get();
+
+        // dd($services);
+
+
+        return view('layouts.gallery.nails',compact('services'));
     }
 
     /**

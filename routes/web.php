@@ -28,6 +28,8 @@ Route::get('/', function () {
     return view('layouts.index');
 });
 ;
+Route::get('/gallery', [App\Http\Controllers\IndexController::class, 'nails']);
+Route::get('/hair-gallery', [App\Http\Controllers\IndexController::class, 'hair']);
 Route::get('/', [App\Http\Controllers\IndexController::class, 'index']);
 Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index']);
 Route::post('/contact-us-store', [App\Http\Controllers\ContactController::class, 'store'])->name('contact-us');
