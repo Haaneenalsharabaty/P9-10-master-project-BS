@@ -14,6 +14,17 @@ class Service extends Model
 
     ];
     use HasFactory;
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'services_users')
+            ->withPivot('id')
+            ->withPivot('mobile_number')
+            ->withPivot('service_name')
+            ->withPivot('status')
+            ->withPivot('date')
+            ->withPivot('time')
+            ->withPivot('note');
+    }
     public function categories()
     {
         return $this->belongsTo(Category::class);

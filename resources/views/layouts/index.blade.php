@@ -153,30 +153,30 @@
                             <div class="col-md-4 style-3">
                                 <div class="tour-item ">
                                     <div class="tour-desc bg-white">
-                                        <div class="tour-text color-grey-3 text-center">“At this School, our mission is to balance a rigorous comprehensive college preparatory curriculum with healthy social and emotional development.”</div>
+                                        <div class="tour-text color-grey-3 text-center">“I've been with the Salon BS Experience for over a year now. Consistent cuts and experience.”</div>
                                         <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/6625914/pexels-photo-6625914.jpeg" alt=""></div>
-                                        <div class="link-name d-flex justify-content-center">Balbir Kaur</div>
-                                        <div class="link-position d-flex justify-content-center">Student</div>
+                                        <div class="link-name d-flex justify-content-center">Haya</div>
+
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4 style-3">
                                 <div class="tour-item ">
                                     <div class="tour-desc bg-white">
-                                        <div class="tour-text color-grey-3 text-center">“At this School, our mission is to balance a rigorous comprehensive college preparatory curriculum with healthy social and emotional development.”</div>
+                                        <div class="tour-text color-grey-3 text-center">“One of the best salon experiences I've ever had! the aroma therapy head massagewas amizing.”</div>
                                         <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></div>
-                                        <div class="link-name d-flex justify-content-center">Balbir Kaur</div>
-                                        <div class="link-position d-flex justify-content-center">Student</div>
+                                        <div class="link-name d-flex justify-content-center">Ruba</div>
+
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4 style-3">
                                 <div class="tour-item ">
                                     <div class="tour-desc bg-white">
-                                        <div class="tour-text color-grey-3 text-center">“At this School, our mission is to balance a rigorous comprehensive college preparatory curriculum with healthy social and emotional development.”</div>
+                                        <div class="tour-text color-grey-3 text-center">“5-star service & haircut! I've never been more comfortable,they more importantly educate about your hair.”</div>
                                         <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/4946604/pexels-photo-4946604.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></div>
-                                        <div class="link-name d-flex justify-content-center">Balbir Kaur</div>
-                                        <div class="link-position d-flex justify-content-center">Student</div>
+                                        <div class="link-name d-flex justify-content-center">Farah</div>
+
                                     </div>
                                 </div>
                             </div>

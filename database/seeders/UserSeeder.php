@@ -27,8 +27,8 @@ class UserSeeder extends Seeder
                  'mobile_number' => '0777777777'
              ],
              [
-                 'name' => 'mahdi',
-                 'email' => 'mh@gmail.com',
+                 'name' => 'test',
+                 'email' => 'test@gmail.com',
                  'password' => $password,
                  'role' => 'user',
                  'mobile_number' => '0777777777'

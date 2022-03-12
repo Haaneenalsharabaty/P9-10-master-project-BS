@@ -17,6 +17,7 @@
           </div>
           <div class="card-body">
             <form method="POST" action="{{ route('login') }}">
+                @csrf
               <div class="input-group form-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">

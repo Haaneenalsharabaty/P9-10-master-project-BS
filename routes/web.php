@@ -27,12 +27,14 @@ Route::get('/aboutUs', function () {
 Route::get('/', function () {
     return view('layouts.index');
 });
-Route::get('/about-us', function () {
-    return view('about-us');
-});
+;
 Route::get('/', [App\Http\Controllers\IndexController::class, 'index']);
 Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index']);
 Route::post('/contact-us-store', [App\Http\Controllers\ContactController::class, 'store'])->name('contact-us');
+Route::get('/user-profile', [App\Http\Controllers\ProfileController::class, 'profile']);
+Route::post('/user-profile-update', [App\Http\Controllers\ProfileController::class, 'update'])->name('users.edit');
+Route::delete('/user-profile-delete/{id}', [App\Http\Controllers\ProfileController::class, 'destroy'])->name('users.destroy');
+
 Auth::routes();
 // Route::middleware(['auth','IsAdmin'])->group(function () {
 
